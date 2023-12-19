@@ -1,0 +1,20 @@
+Estudiante: {'_nombre': 'Luis', '_email': 'luis@mail.com', '_semestre': 'Primer Semestre'}Estudiante: {'_nombre': 'Luis', '_email': 'luis2@mail.com', '_semestre': 'Segundo Semestre'}Estudiante: {'_nombre': 'Luis', '_email': 'luis@mail.com', '_semestre': 'Segundo Semestre'}Estudiante: {'_nombre': 'Maria', '_email': 'maria@mail.com', '_semestre': 'Segundo Semestre'}Estudiante: {'_nombre': 'Jose', '_email': 'jose@mail.com', '_semestre': 'Primer Semestre'}Estudiante: {'_nombre': 'Pedro', '_email': 'pedro@maill.com', '_semestre': 'Tercer Semestre'}Estudiante: {'_nombre': 'Zzz', '_email': 'zzz', '_semestre': 'Primer Semestre'}
+Estudiante: {'_nombre': 'Qqq', '_email': 'qq', '_semestre': 'Segundo Semestre'}
+Estudiante: {'_nombre': 'Kkk', '_email': 'kkk', '_semestre': 'Primer Semestre'}
+Estudiante: {'_nombre': '', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': '', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': '', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': '', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': '', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': '', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': '', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': '', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': '', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': 'Q', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': 'Q', '_email': '', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': 'Q', '_email': 'q', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': 'Q', '_email': 'q', '_semestre': 'Seleccionar'}
+Estudiante: {'_nombre': 'E', '_email': 'r', '_semestre': 'Primer Semestre'}
+Estudiante: {'_nombre': 'Y', '_email': 'y', '_semestre': 'Tercer Semestre', '_cedula': None}
+Estudiante: {'_nombre': 'Sf', '_email': 'sadf', '_semestre': 'Primer Semestre', '_cedula': None}
+Estudiante: {'_nombre': 'Luis', '_email': 'luis.perez@mail.com', '_semestre': 'Primer Semestre', '_cedula': None}
