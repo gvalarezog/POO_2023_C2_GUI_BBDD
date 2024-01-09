@@ -2,7 +2,8 @@ from PySide6.QtCore import QRegularExpression
 from PySide6.QtGui import QIntValidator, QRegularExpressionValidator
 from PySide6.QtWidgets import QMainWindow, QMessageBox
 
-from Datos.estudiante import Estudiante
+from Datos.estudiante_Dao import EstudianteDao
+from Dominio.estudiante import Estudiante
 from GUI.vtn_principal import Ui_vtn_principal
 
 
@@ -13,6 +14,7 @@ class EstudianteServicio(QMainWindow):
         self.ui.setupUi(self)
         self.estudiante = None
         self.ui.btn_grabar.clicked.connect(self.grabar)
+        self.ui.btn_busca_x_cedula.clicked.connect(self.buscar_por_cedula)
         self.ui.txt_cedula.setValidator(QIntValidator())
         regex = QRegularExpression("^\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b$")
         validator = QRegularExpressionValidator(regex)
@@ -24,12 +26,14 @@ class EstudianteServicio(QMainWindow):
             nombre = self.ui.txt_nombre.text().capitalize()
             email = self.ui.txt_email.text().lower()
             semestre = self.ui.cb_semestre.currentText()
-            self.estudiante = Estudiante(nombre=nombre, email=email, semestre=semestre)
+            cedula = self.ui.txt_cedula.text()
+            self.estudiante = Estudiante(nombre=nombre, email=email, semestre=semestre, cedula=cedula)
 
             try:
-                with open('estudiante.txt', 'a') as archivo:
-                    archivo.write(self.estudiante.__str__())
-                    archivo.write('\n')
+                EstudianteDao.insertar_estudiante(self.estudiante)
+            #     with open('estudiante.txt', 'a') as archivo:
+            #         archivo.write(self.estudiante.__str__())
+            #         archivo.write('\n')
                 self.ui.sb_estado.showMessage('Ingreso exitoso.',3000)
                 self.ui.txt_email.setText('')
                 self.ui.txt_nombre.setText('')
@@ -46,4 +50,14 @@ class EstudianteServicio(QMainWindow):
                 and len(self.ui.txt_email.text()) > 0
                 and self.ui.cb_semestre.currentText()!='Seleccionar'
                 and len(self.ui.txt_cedula.text())==10)
+
+
+    def buscar_por_cedula(self):
+        cedula = self.ui.txt_cedula.text()
+        self.estudiante = Estudiante(cedula=cedula)
+        estudiante_encontrado = EstudianteDao.seleccionar_x_cedudla(self.estudiante)
+        # print(estudiante_encontrado)
+        self.ui.txt_email.setText(estudiante_encontrado.email)
+        self.ui.txt_nombre.setText(estudiante_encontrado.nombre)
+        self.ui.cb_semestre.setCurrentText(estudiante_encontrado.semestre)
 

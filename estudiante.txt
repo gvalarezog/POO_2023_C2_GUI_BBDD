@@ -18,3 +18,4 @@ Estudiante: {'_nombre': 'E', '_email': 'r', '_semestre': 'Primer Semestre'}
 Estudiante: {'_nombre': 'Y', '_email': 'y', '_semestre': 'Tercer Semestre', '_cedula': None}
 Estudiante: {'_nombre': 'Sf', '_email': 'sadf', '_semestre': 'Primer Semestre', '_cedula': None}
 Estudiante: {'_nombre': 'Luis', '_email': 'luis.perez@mail.com', '_semestre': 'Primer Semestre', '_cedula': None}
+Estudiante: {'_nombre': 'Luis', '_email': 'luis@mail.com', '_semestre': 'Primer Semestre', '_cedula': None}

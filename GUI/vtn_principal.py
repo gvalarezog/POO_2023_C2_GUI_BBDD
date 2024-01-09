@@ -58,10 +58,17 @@ class Ui_vtn_principal(object):
         self.txt_cedula.setObjectName(u"txt_cedula")
         self.txt_cedula.setGeometry(QRect(180, 90, 201, 22))
         self.txt_cedula.setMaxLength(10)
+        self.btn_busca_x_cedula = QPushButton(self.centralwidget)
+        self.btn_busca_x_cedula.setObjectName(u"btn_busca_x_cedula")
+        self.btn_busca_x_cedula.setGeometry(QRect(400, 90, 111, 24))
         vtn_principal.setCentralWidget(self.centralwidget)
         self.sb_estado = QStatusBar(vtn_principal)
         self.sb_estado.setObjectName(u"sb_estado")
         vtn_principal.setStatusBar(self.sb_estado)
+        QWidget.setTabOrder(self.txt_nombre, self.txt_cedula)
+        QWidget.setTabOrder(self.txt_cedula, self.txt_email)
+        QWidget.setTabOrder(self.txt_email, self.cb_semestre)
+        QWidget.setTabOrder(self.cb_semestre, self.btn_grabar)
 
         self.retranslateUi(vtn_principal)
 
@@ -80,5 +87,6 @@ class Ui_vtn_principal(object):
         self.lbl_semestre.setText(QCoreApplication.translate("vtn_principal", u"Semestre:", None))
         self.btn_grabar.setText(QCoreApplication.translate("vtn_principal", u"Grabar", None))
         self.lbl_cedula.setText(QCoreApplication.translate("vtn_principal", u"Cedula:", None))
+        self.btn_busca_x_cedula.setText(QCoreApplication.translate("vtn_principal", u"Buscar por Cedula", None))
     # retranslateUi
 

@@ -142,9 +142,29 @@
      <number>10</number>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_busca_x_cedula">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>90</y>
+      <width>111</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Buscar por Cedula</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="sb_estado"/>
  </widget>
+ <tabstops>
+  <tabstop>txt_nombre</tabstop>
+  <tabstop>txt_cedula</tabstop>
+  <tabstop>txt_email</tabstop>
+  <tabstop>cb_semestre</tabstop>
+  <tabstop>btn_grabar</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
