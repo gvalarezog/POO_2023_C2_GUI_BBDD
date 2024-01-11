@@ -1,4 +1,5 @@
 from Datos.conexion import Conexion
+from Dominio.estudiante import Estudiante
 
 
 class EstudianteDao:
@@ -7,6 +8,7 @@ class EstudianteDao:
                             "VALUES (?, ?, ?, ?)")
     _SELECCIONAR_X_CEDULA = ("SELECT NOMBRE, CEDULA, SEMESTRE, EMAIL FROM Estudiantes "
                              "WHERE CEDULA = ?")
+    _SELECCIONAR_PERSONAS = "SELECT NOMBRE, CEDULA, SEMESTRE, EMAIL FROM Estudiantes"
 
     @classmethod
     def insertar_estudiante(cls, estudiante):
@@ -32,5 +34,23 @@ class EstudianteDao:
             print(e)
             estudiante = None
 
+    @classmethod
+    def seleccionar_personas(cls):
+        try:
+            estudiantes = list()
+            cursor = Conexion.obtenerCursor()
+            registros = cursor.execute(cls._SELECCIONAR_PERSONAS).fetchall()
+            for registro in registros:
+                estudiante = Estudiante(nombre=registro[0], cedula=registro[1]
+                                        , email=registro[3], semestre=registro[2])
+                estudiantes.append(estudiante)
+            return estudiantes
+        except Exception as e:
+            print(e)
+            return None
+
 if '__main__' == __name__:
-    EstudianteDao.insertar_estudiante()
+    # EstudianteDao.insertar_estudiante()
+    personas = EstudianteDao.seleccionar_personas()
+    for persona in personas:
+        print(persona)
