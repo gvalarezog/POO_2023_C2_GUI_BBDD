@@ -61,6 +61,15 @@ class Ui_vtn_principal(object):
         self.btn_busca_x_cedula = QPushButton(self.centralwidget)
         self.btn_busca_x_cedula.setObjectName(u"btn_busca_x_cedula")
         self.btn_busca_x_cedula.setGeometry(QRect(400, 90, 111, 24))
+        self.txt_edad = QLineEdit(self.centralwidget)
+        self.txt_edad.setObjectName(u"txt_edad")
+        self.txt_edad.setGeometry(QRect(180, 190, 113, 22))
+        self.lbl_edad = QLabel(self.centralwidget)
+        self.lbl_edad.setObjectName(u"lbl_edad")
+        self.lbl_edad.setGeometry(QRect(110, 190, 49, 16))
+        self.btn_calcular = QPushButton(self.centralwidget)
+        self.btn_calcular.setObjectName(u"btn_calcular")
+        self.btn_calcular.setGeometry(QRect(360, 230, 75, 24))
         vtn_principal.setCentralWidget(self.centralwidget)
         self.sb_estado = QStatusBar(vtn_principal)
         self.sb_estado.setObjectName(u"sb_estado")
@@ -88,5 +97,7 @@ class Ui_vtn_principal(object):
         self.btn_grabar.setText(QCoreApplication.translate("vtn_principal", u"Grabar", None))
         self.lbl_cedula.setText(QCoreApplication.translate("vtn_principal", u"Cedula:", None))
         self.btn_busca_x_cedula.setText(QCoreApplication.translate("vtn_principal", u"Buscar por Cedula", None))
+        self.lbl_edad.setText(QCoreApplication.translate("vtn_principal", u"Edad:", None))
+        self.btn_calcular.setText(QCoreApplication.translate("vtn_principal", u"Calcular", None))
     # retranslateUi
 
